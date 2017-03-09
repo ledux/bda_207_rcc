@@ -1,0 +1,125 @@
+% tex.startup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.0 (21/4/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+%oneside, % One page layout (no page indentation)
+hidelinks,
+twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR=10mm % Binding correction
+]{scrartcl}
+
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\addbibresource{bibliography.bib}
+
+%----------------------------------------------------------------------------------------
+%   TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont\spacedallcaps{Name der BDA}}
+\subtitle{Untertitel der BDA}
+
+
+
+\author{\large Tanner / Wechsler}
+
+\date{\today} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%   HEADERS
+%----------------------------------------------------------------------------------------
+
+\setlength\headheight{52pt}
+\setlength\footheight{16pt}
+
+%\rehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+\rohead{\mbox{\llap{\color{halfgray}\rightmark\kern0.6em
+\vline}\kern0.6em\normalsize\thepage\color{halfgray}\hfil}} % The header style
+
+\lehead{\mbox{\rlap{\normalsize\thepage\kern0.6em\color{halfgray}
+\vline\color{halfgray}\kern0.6em\rightmark}}} % The header style
+
+\rehead{\includegraphics[width=1.4cm]{placeholder.png}}
+\lohead{\includegraphics[width=1.4cm]{placeholder.png}}
+
+\lefoot{\color{halfgray}Name der BDA}
+\rofoot{\color{halfgray}Name der BDA}
+
+\refoot{\color{halfgray}Tanner/Wechsler}
+\lofoot{\color{halfgray}Tanner/Wechsler}
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+\selectlanguage{ngerman}
+
+\renewcommand*{\lstlistlistingname}{Codeverzeichnis}
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%   TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+\thispagestyle{empty} % no pagenumber on title page
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=1\columnwidth]{placeholder.png}
+\end{figure}
+
+\setcounter{tocdepth}{3} % Set the depth of the table of contents to show sections and subsections only
+\setcounter{secnumdepth}{3}
+\cleardoublepage{}
+
+%----------------------
+% Input der verschiedenen Teile
+%----------------------
+
+\input{./abstract.tex}
+\clearpage
+
+\tableofcontents % Print the table of contents
+\clearpage
+
+\input{./definitions.tex}
+\clearpage
+
+\input{./goals.tex}
+\clearpage
+
+
+\printbibliography{}
+\listoffigures % Print the list of figures
+\listoftables % Print the list of tables
+\lstlistoflistings{} % print the list of code
+
+\clearpage
+
+
+\end{document}
