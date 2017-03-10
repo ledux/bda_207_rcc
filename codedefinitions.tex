@@ -1,0 +1,54 @@
+
+\lstloadlanguages{[Sharp]C,Java}
+
+      % The first argument is the script location/filename and the second is a caption for the
+      % listing
+\newcommand{\insertcsharp}[2]{\begin{itemize}\item[]\lstinputlisting[caption=#2,label=#1,style=csharp]{#1}\end{itemize}}
+
+\newcommand{\insertjava}[2]{\begin{itemize}\item[]\lstinputlisting[caption=#2,label=#1,style=java]{#1}\end{itemize}}
+
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{highlight}{RGB}{255,251,204} % Code highlight color
+
+\lstdefinestyle{csharp}{
+  language=[Sharp]C,
+  backgroundcolor=\color{highlight},
+  basicstyle=\footnotesize\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  showstringspaces=false,
+  % moredelim=[il][\textcolor{pgrey}]{$$},
+  % moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{Gray},
+  stepnumber=1, % The step distance between line numbers, i.e. how often will lines be numbered
+  tabsize=4
+}
+
+\lstdefinestyle{csharp}{
+  language=Java,
+  backgroundcolor=\color{highlight},
+  basicstyle=\footnotesize\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  % moredelim=[il][\textcolor{pgrey}]{$$},
+  % moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{Gray},
+  stepnumber=1, % The step distance between line numbers, i.e. how often will lines be numbered
+  tabsize=4
+}
